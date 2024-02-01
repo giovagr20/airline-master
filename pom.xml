@@ -129,8 +129,6 @@
 							<excludes>
 								<exclude>com/dhanush/airline/dao/**</exclude>
 								<exclude>com/dhanush/airline/vo/**</exclude>
-								<exclude>com/dhanush/airline/security/**</exclude>
-								<exclude>com/dhanush/airline/entity/**</exclude>
 								<exclude>com/dhanush/airline/exception/**</exclude>
 								<exclude>com/dhanush/airline/App.class</exclude>
 							</excludes>
