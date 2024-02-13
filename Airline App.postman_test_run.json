@@ -1,0 +1,253 @@
+{
+	"id": "6b2550db-1ed1-4a7f-ab1f-c8a1a7ae2b5b",
+	"name": "Airline App",
+	"timestamp": "2024-02-13T21:53:20.421Z",
+	"collection_id": "6621951-fb00d46f-b6cc-4cfc-9173-9e5437b82a84",
+	"folder_id": 0,
+	"environment_id": "6621951-7f1b5eb6-6be7-4982-9395-b231d402b9cc",
+	"totalPass": 14,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-02-13T21:53:19.897Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "2a06a76a-feb2-406a-82c0-d7e3aa0b055d",
+			"name": "FlightByNumberFlightDateFlightTime",
+			"url": "http://localhost:9090/getFlightByNumberFlightDateFlightTime",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				30
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0d4374fa-fe99-446f-a918-fcf8779b357e",
+			"name": "SearchFlights",
+			"url": "http://localhost:9090/searchFlights",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the correct Content-Type header": true,
+				"Response body is an empty array": true,
+				"Response time is within an acceptable range": true,
+				"Validate that the response is in the expected JSON format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the correct Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is an empty array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that the response is in the expected JSON format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the correct Content-Type header": true,
+					"Response body is an empty array": true,
+					"Response time is within an acceptable range": true,
+					"Validate that the response is in the expected JSON format": true
+				}
+			]
+		},
+		{
+			"id": "4d0d934e-5a77-4688-9ed7-f29f02ffe783",
+			"name": "BookingById",
+			"url": "http://localhost:9090/booking/1",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5c923e08-2b8e-49fd-8253-b0a07f61f9c8",
+			"name": "AllBookings",
+			"url": "http://localhost:9090/allBookings",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the correct Content-Type header": true,
+				"Response body is an array": true,
+				"Response body is empty": false,
+				"Response time is within an acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the correct Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is empty": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the correct Content-Type header": true,
+					"Response body is an array": true,
+					"Response body is empty": false,
+					"Response time is within an acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "4dd09417-c5bd-471f-b737-e3b9e5a6f4bd",
+			"name": "BookFlight",
+			"url": "http://localhost:9090/bookFlight",
+			"time": 69,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				69
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a1c59335-df04-40bd-bdfa-87c30bf4cd86",
+			"name": "RegisterForm",
+			"url": "http://localhost:9090/register",
+			"time": 130,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Response has the required fields": true,
+				"Mobile number is a non-negative integer": true,
+				"UserName should be a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Mobile number is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"UserName should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				130
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Response has the required fields": true,
+					"Mobile number is a non-negative integer": true,
+					"UserName should be a non-empty string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 258,
+	"collection": {
+		"requests": [
+			{
+				"id": "2a06a76a-feb2-406a-82c0-d7e3aa0b055d",
+				"method": "POST"
+			},
+			{
+				"id": "0d4374fa-fe99-446f-a918-fcf8779b357e",
+				"method": "POST"
+			},
+			{
+				"id": "4d0d934e-5a77-4688-9ed7-f29f02ffe783",
+				"method": "GET"
+			},
+			{
+				"id": "5c923e08-2b8e-49fd-8253-b0a07f61f9c8",
+				"method": "GET"
+			},
+			{
+				"id": "4dd09417-c5bd-471f-b737-e3b9e5a6f4bd",
+				"method": "POST"
+			},
+			{
+				"id": "a1c59335-df04-40bd-bdfa-87c30bf4cd86",
+				"method": "POST"
+			}
+		]
+	}
+}
