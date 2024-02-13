@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "4538aeb6-a0f9-4b8b-8d1c-1a06250c3e86",
+		"name": "Airline App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6621951"
+	},
+	"item": [
+		{
+			"name": "Flights",
+			"item": [
+				{
+					"name": "FlightByNumberFlightDateFlightTime",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.5.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"destination\": \"Bogota\",\n  \"duration\": \"1h\",\n  \"flightDate\": \"2024-02-13\",\n  \"flightNumber\": \"2230\",\n  \"flightTime\": \"14:42:07\",\n  \"origin\": \"Medellin\",\n  \"fare\": {\n    \"fareId\": 1,\n    \"currency\": \"USD\",\n    \"fare\": 2.00\n  },\n  \"flightInfo\": {\n    \"flightInfoid\": 1,\n    \"flightNumber\": \"2230\",\n    \"flightType\": \"G\",\n    \"numberofSeats\": 30,\n    \"airlineInfo\": {\n      \"airlineId\": 1,\n      \"airlineLogo\": \"Latam\",\n      \"nameOfAirline\": \"LatamAirline\"\n    }\n  },\n  \"inventory\": {\n    \"inventoryId\": 0,\n    \"count\": 0\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ _.local }}/getFlightByNumberFlightDateFlightTime",
+							"host": [
+								"{{ _.local }}"
+							],
+							"path": [
+								"getFlightByNumberFlightDateFlightTime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchFlights",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.5.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"origin\": \"MEdellin\",\n  \"destination\": \"Bogota\",\n  \"flightDate\": \"2024-02-13T14:39:47\",\n  \"count\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ _.local }}/searchFlights",
+							"host": [
+								"{{ _.local }}"
+							],
+							"path": [
+								"searchFlights"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "BookingById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.5.1"
+							}
+						],
+						"url": {
+							"raw": "{{ _.local }}/booking/1",
+							"host": [
+								"{{ _.local }}"
+							],
+							"path": [
+								"booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllBookings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.5.1"
+							}
+						],
+						"url": {
+							"raw": "{{ _.local }}/allBookings",
+							"host": [
+								"{{ _.local }}"
+							],
+							"path": [
+								"allBookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BookFlight",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.5.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bookingDate\": \"2024-02-13T12:16:41\",\n  \"destination\": \"Bogota\",\n  \"fare\": 2.00,\n  \"flightDate\": \"2024-02-13\",\n  \"flightNumber\": \"2231\",\n  \"flightTime\": \"12:16:41\",\n  \"origin\": \"Medellin\",\n  \"status\": \"C\",\n  \"passengers\": [\n    {\n      \"emailAddress\": \"12lina@youmail.com\",\n      \"firstName\": \"Lina Maria\",\n      \"gender\": \"F\",\n      \"lastName\": \"Gomez\",\n      \"mobileNumber\": 21344,\n      \"bookingId\": 1,\n      \"checkIn\": {\n        \"seatNumber\": \"4\",\n        \"gateNumber\": \"1\"\n      }\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ _.local }}/bookFlight",
+							"host": [
+								"{{ _.local }}"
+							],
+							"path": [
+								"bookFlight"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "RegisterForm",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.5.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Alejandro\",\n\t\"lastName\":\"Gomez\",\n  \"mobileNumber\":\"321233221\",\n  \"gender\": \"M\",\n\t\"userName\":\"alejogr20\",\n\t\"password\":\"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ _.local }}/register",
+							"host": [
+								"{{ _.local }}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "environment",
+			"value": "http://localhost:9090"
+		},
+		{
+			"key": " _.local ",
+			"value": "http://localhost:9090/"
+		}
+	]
+}
