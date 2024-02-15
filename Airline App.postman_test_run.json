@@ -112,7 +112,7 @@
 				"Response status code is 200": true,
 				"Response has the correct Content-Type header": true,
 				"Response body is an array": true,
-				"Response body is empty": false,
+				"Response body is empty": true,
 				"Response time is within an acceptable range": true
 			},
 			"testPassFailCounts": {
@@ -129,8 +129,8 @@
 					"fail": 0
 				},
 				"Response body is empty": {
-					"pass": 0,
-					"fail": 1
+					"pass": 1,
+					"fail": 0
 				},
 				"Response time is within an acceptable range": {
 					"pass": 1,
@@ -145,7 +145,7 @@
 					"Response status code is 200": true,
 					"Response has the correct Content-Type header": true,
 					"Response body is an array": true,
-					"Response body is empty": false,
+					"Response body is empty": true,
 					"Response time is within an acceptable range": true
 				}
 			]
